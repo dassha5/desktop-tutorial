@@ -1,0 +1,60 @@
+from dataclasses import dataclass
+
+
+@dataclass
+class TypeOfMainAssets:
+     code: int
+     name: str
+     remainder: str 
+     output: int
+
+@dataclass
+class MoveOfMainAssets:
+    name: str
+    code: int
+    received: int
+    output: int
+
+type_array = []
+type_array.append(TypeOfMainAssets(1001, "Програмно-апаратна організація комп'ютера IDM РС", "П.Нортон", 400))
+type_array.append(TypeOfMainAssets(1002, "Посібник з експлуатації ПЕОМ IBM РС", "Р.Джордейн", 400))
+type_array.append(TypeOfMainAssets(1003, "Операційна система MS DOS 3.3", "Р.Джордейн и др.",700))
+type_array.append(TypeOfMainAssets(1004, "Асемблер для IBM РС", "А.Абель", 400))
+type_array.append(TypeOfMainAssets(1005, "Мова програмування C","Керніган, Рітчі", 300))
+type_array.append(TypeOfMainAssets(1006, "TURBO PASCAL для професіоналів", "Г.Шилдт", 650 ))
+
+move_array = []
+move_array.append(MoveOfMainAssets("КНТЕУ",1101,1001,5))
+move_array.append(MoveOfMainAssets("КНТЕУ",1222,1002,5))
+move_array.append(MoveOfMainAssets("КНТЕУ",1029,1003,20))
+move_array.append(MoveOfMainAssets("КНТЕУ",1040,1004,5))
+move_array.append(MoveOfMainAssets("КНТЕУ",1050,1005,30))
+move_array.append(MoveOfMainAssets("КНЕУ",1100,1006,200))
+move_array.append(MoveOfMainAssets("КНЕУ",1101,1001,6))
+move_array.append(MoveOfMainAssets("КНЕУ",1222,1002,6))
+move_array.append(MoveOfMainAssets("КНЕУ",1029,1003,25))
+move_array.append(MoveOfMainAssets("КНЕУ",1040,1004,7))
+move_array.append(MoveOfMainAssets("КНЕУ",1050,1005,25))
+move_array.append(MoveOfMainAssets("КНЕУ",1100,1006,220))
+move_array.append(MoveOfMainAssets("КНУ",1101,1001,8))
+move_array.append(MoveOfMainAssets("КНУ",1222,1002,8))
+move_array.append(MoveOfMainAssets("КНУ",1029,1003,23))
+move_array.append(MoveOfMainAssets("КНУ",1040,1004,7))
+move_array.append(MoveOfMainAssets("КНУ",1050,1005,28))
+move_array.append(MoveOfMainAssets("КНУ",1100,1006,210))
+
+def printMoveOfMainAssets(moveOfMainOfMainAssets):
+    print("Назва: {name}, Код замовлення: {code}, Код товару: {received}, Кількість: {output}"
+        .format(name=moveOfMainAssets.name, code=moveOfMainAssets.code, received=moveOfMainAssets.received, 
+        output=moveOfMainAssets.output))
+
+for data in move_array:
+     printMoveOfMainAssets(data)
+
+def printTypeOfMainAssets(typeOfMainAssets):
+    print("Код: {code}, Назва {name}, Автор {remainder}, Ціна {output}"
+         .format(code=moveOfMainMainAssets.code, name=moveOfMainAssets.name, remainder=moveOfMainAssets.remainder,
+          output=moveOfMainAssets.output))
+
+for data in type_array:
+     printTypeOfMainAssets(data)
