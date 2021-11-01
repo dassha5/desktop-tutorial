@@ -1,0 +1,6 @@
+file=open("Book.txt","r")
+symbols = 0
+for line in file:
+    wordslist = line.split()
+    symbols = symbols + len(wordslist)
+print("Book.txt",symbols)
