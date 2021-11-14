@@ -1,0 +1,70 @@
+class Library:
+    def __init__(self, name, genre, year, author):
+        self.name=name
+        self.grade=genre
+        self.year=year
+        self.author=author
+
+book1 = ("Harry Potter", "Adventure", "1997", "Joanne Rowling")
+book2 = ("War and Peace","novel","1867","Leo Tolstoy")
+
+print("Домашня бібліотека")
+
+while True:
+    print("1. Бібліотека.\n2. Пошук.\n3. Додати книгу.\n4. Видалити книгу.\n5. Вихід.\n")
+    userInput = str(input())
+
+    if userInput == "1":
+        print(book1)
+        print(book2)
+        
+    elif userInput == "2":
+        while True:
+            choice = input("Пошук книги за допомогою...\n1. name.\n2. genrе.\n3. year.\n4. author.\n")
+            if choice == "1":
+                while True:
+                    choice = input("Уведіть дані для пошуку.\n")
+                    if choice == 'Harry Potter':
+                        print("Adventure,1997,Joanne Rowling")
+                    else:
+                        print("Уведіть дані для пошуку.")
+                        if choice == "War and Peace":
+                            print("novel,1867,Leo Tolstoy")
+            if choice == "2":
+                while True:
+                    choice = input("ВВедіть дані для пошуку.\n")
+                    if choice == "Adventure":
+                        print("Harry Potter, 1997, Joanne Rowling")
+                    else:
+                        print("Уведіть дані для пошуку.")
+                        if choice == "novel":
+                            print("War and Peace,novel,1867,Leo Tolstoy")
+            if choice == "3":
+                while True:
+                    choice = input("Уведіть дані для пошуку.\n")
+                    if choice == "1867":
+                        print("War and Peace,novel,Leo Tolstoy")
+                    else:
+                        print("Уведіть дані для пошуку")
+                        if choice == "1997":
+                            print("Harry Potter,Adventure,Joanne Rowling")
+            if choice == "4":
+                while True:
+                    choice = input("ВВедіть дані для пошуку.\n")
+                    if choice == "Joanne Rowling":
+                        print("Harry Potter,Adventure,1997")
+                    else:
+                        print("ВВедіть дані для пошуку.")
+                        if choice == "Leo Tolstoy":
+                            print("War and Peace,novel,1867")
+                    
+                        
+    elif userInput == "3":
+        print("Додайте книгу.")
+        filename = input()
+        print("Операція успішна.")
+    elif userInput == "4":
+        import os
+        os.remove(" D:\\booktext.txt")
+    elif userInput == "5":
+        break
