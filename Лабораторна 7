@@ -1,0 +1,12 @@
+from numpy import *
+import matplotlib.pyplot as plt
+from numpy import sin
+
+def f(x):
+    return 1/x*sin(5*x)
+
+x = linspace(-5,5)
+y = f(x)
+
+plt.plot(x, y)
+plt.show()
